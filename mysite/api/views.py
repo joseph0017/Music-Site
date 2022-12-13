@@ -59,7 +59,7 @@ def get_music_paginated_queryset_response(qs, request):
 
 def get_images_paginated_queryset_response(qs, request):
     paginator = PageNumberPagination()
-    paginator.page_size = 5
+    paginator.page_size = 23
     paginated_qs = paginator.paginate_queryset(qs, request)
     serializer = ImageSerializer(
         paginated_qs, many=True, context={"request": request})

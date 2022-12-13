@@ -13,7 +13,7 @@ class Music_Player(models.Model):
     rewind = models.BooleanField(null=False, default=False)
     current_song = models.CharField(max_length=100, null=True)
     duration = models.CharField(max_length=20, default=False)
-    name = models.CharField(max_length=100, null=True)
+    name = models.CharField(max_length=100, null=True) 
     singer = models.TextField(max_length=1000, null=True)
     created_date = models.DateTimeField(default=timezone.now)
 
