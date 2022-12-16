@@ -49,7 +49,7 @@ def images_list_view(request, *args, **kwargs):
 
 def get_music_paginated_queryset_response(qs, request):
     paginator = PageNumberPagination()
-    paginator.page_size = 5
+    paginator.page_size = 20
     paginated_qs = paginator.paginate_queryset(qs, request)
     serializer = MusicSerializer(
         paginated_qs, many=True, context={"request": request})
